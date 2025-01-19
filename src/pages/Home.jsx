@@ -1,77 +1,80 @@
 import React from "react";
 import img2 from "../assets/images/img2.png";
 import img3 from "../assets/images/img5.png";
-
+import walletIcon from "../assets/images/wallet-icon.png";
+import atmIcon from "../assets/images/atm-icon.png";
+import transferIcon from "../assets/images/transfer-icon.png";
 const Home = () => {
   return (
-    <div>
-      <div className="md:w-[700px] md:space-y-8 md:grid place-items-center m-auto mt-5 relative">
-        {/* Images for small screens */}
-        <div className="md:hidden flex flex-col mt-8 justify-center space-x-4">
-          <img src={img2} className="w-52" alt="Image 2" />
-          {/* <img src={img3} className="w-[50px]" alt="Image 3" /> */}
-        </div>
-
-        {/* Images for medium and larger screens */}
-        <div className="hidden md:block">
-          <img
-            src={img2}
-            className="w-[300.06px] absolute left-[-250px] top-[100px]"
-            alt="Image 2"
-          />
-        </div>
-        <img
-          src={img3}
-          className="w-[370.66px] hidden md:block absolute right-[-300px] top-[60px]"
-          alt="Image 3"
-        />
-
-        {/* Main content */}
-        <div className="relative z-10 text-center">
-          <h1 className="text-[30px] md:text-[48px] font-bold md:leading-[55px] leading-[30px] text-[#1e1e1e]">
-            Unlock your potential with{" "}
-            <span className="text-purple-500">ByteCamp</span>
-          </h1>
-          <p className="mt-2 md:mt-[10px] text-[12px] md:text-[17px] font-semibold text-[#282727] md:leading-[22px] leading-[16px] md:w-[505px] w-[311px] m-auto">
-            Welcome to the future of education! ByteCamp is designed to empower
-            learners of all levels, equipping them with the skills and knowledge
-            needed to excel.
-          </p>
-          <button className="px-4 py-2 bg-purple-500 rounded-lg text-white font-semibold mt-10 ">
-            Join the wailist
-          </button>
-          <div className="flex justify-center gap-5 mt-4">
-            <i class="bi bi-facebook text-[24px]"></i>
-
-            <i class="bi bi-linkedin text-[24px]"></i>
-
-            <i class="bi bi-instagram text-[24px]"></i>
-            <i class="bi bi-twitter text-[24px]"></i>
+    <div className="w-full">
+      {/* Hero Section */}
+      <div className="hero grid place-items-center m-auto mt-10 relative">
+        {/* Main Section */}
+        <div className="w-full px-4 md:px-0 md:w-[80%] mt-20">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            {/* Text Content */}
+            <div className="text-center md:text-left">
+              <h1 className="hero-txt text-4xl md:text-7xl font-bold text-white">
+                Join the waitlist for ByteCamp
+              </h1>
+              <p className="font-normal text-white text-base md:text-lg py-3">
+                Unlock Your Potential with ByteCamp
+              </p>
+            </div>
+            {/* Image */}
+            <div className="mt-5 md:mt-0">
+              <img
+                src={img2}
+                alt="ByteCamp illustration"
+                className="w-full max-w-[300px] md:max-w-[600px]"
+              />
+            </div>
           </div>
+        </div>
+
+        {/* Input Section */}
+        <div className="flex gap-3 mt-5 px-4 md:mt-8 md:w-[80%] w-full">
+          <input
+            type="email"
+            placeholder="Enter Email Address"
+            className="w-[230px] md:w-[350px] min-h-[48px] rounded-lg text-base border border-gray-700 bg-gray-800 text-gray-200 placeholder:text-gray-400 outline-none px-4 py-3 focus:ring-1 focus:ring-purple-500"
+          />
+          <button className="px-6 md:px-8 py-3 h-12 font-semibold text-white bg-purple-500 rounded-lg hover:bg-purple-600">
+            Join
+          </button>
         </div>
       </div>
-      <div className="w-full p-6 flex items-center justify-center bg-[#000] mt-[250px]">
-        <div>
-          <h1 className="md:text-[44px] text-[24px] text-center font-bold text-white">
-            BE PART OF SOMETHING BIG{" "}
-          </h1>
-          <p className="md:text-[20px] text-[14px] font-[400] text-center text-white">
-            Sign up today and take the first step toward a brighter future.
-          </p>
-          <div className="flex gap-3 mt-10">
-            <input
-              type="text"
-              placeholder="Enter Email"
-              className="w-full min-h-[48px] resize-none rounded-lg text-base flex-1 border-solid border border-dark-300 block font-sans bg-dark-500 text-gray-200 placeholder:text-gray-400 outline-none focus:outline-none focus:ring-0 focus:border-gray-700 px-4 py-3 overflow-hidden"
-            />
-            <button className=" relative z-30 px-8 py-3 h-12 font-sans  disabled:cursor-auto border-none cursor-pointer bg-purple-500 text-offwhite font-semibold rounded-lg">
-              {" "}
-              Send{" "}
-            </button>
+
+      {/* Features Section */}
+      <div className="row-1 p-6 flex flex-col md:flex-row gap-10 mt-32 mb-20 justify-center">
+        {/* Feature Cards */}
+        <div className="bg-gray-900 p-6 flex flex-col justify-center items-center rounded-lg w-full md:w-80">
+          <div className="mb-4">
+            <img src={transferIcon} alt="Transfer Icon" />
           </div>
-          <p className="md:text-[14px] text-[10px] font-[400] text-center p-4 text-white">
-            Please enter the email you used to join the waitlist to view your
-            position details
+          <h3 className="font-bold text-2xl text-white">Trade Desk</h3>
+          <p className="text-gray-400 text-center p-3">
+            Invest in crypto anytime, anywhere with our safe, secure, and easy-to-use online platform.
+          </p>
+        </div>
+
+        <div className="bg-gray-900 p-6 flex flex-col justify-center items-center rounded-lg w-full md:w-80">
+          <div className="mb-4">
+            <img src={atmIcon} alt="ATM Icon" />
+          </div>
+          <h3 className="font-bold text-2xl text-white">CoinFlip ATMs</h3>
+          <p className="text-gray-400 text-center p-3">
+            We have thousands of ATMs located across the U.S. where you can easily convert cash to crypto.
+          </p>
+        </div>
+
+        <div className="bg-gray-900 p-6 flex flex-col justify-center items-center rounded-lg w-full md:w-80">
+          <div className="mb-4">
+            <img src={walletIcon} alt="Wallet Icon" />
+          </div>
+          <h3 className="font-bold text-2xl text-white">CoinFlip Wallet</h3>
+          <p className="text-gray-400 text-center p-3">
+            Store your growing investments in our non-custodial wallet that gives you access to a full suite of DeFi services in one place.
           </p>
         </div>
       </div>

@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body .hero-txt {
+    font-family: 'Arial', sans-serif;
+    /* font-size: 4em;  */
+    font-weight: bold; /* Bold text */
+    line-height: 1.2; /* Adjust spacing */
+   
+    background: linear-gradient(
+        90deg, 
+        #CDF9E8 0%,
+      
+        #C0A9F0, /* Light purple */
+        #DC8DDC, /* Rich purple */
+        #F0BDD0, /* Light pink */
+        #FFFDB1, /* Pale yellow */
+        #FEE4BF 100%, /* Soft peach */
+        #FF8126 100% /* Orange with reduced space */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body .hero {
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('/src/assets/images/block-1.png') no-repeat;
+}
